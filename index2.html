@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<head>
+<head> <!-- npx @tailwindcss/cli -i ./src/css/style.css -o ./src/output.css --watch -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NATOCl cv</title>
@@ -9,7 +9,7 @@
 </head>
 <body class="bg-linear-to-b from-[oklch(38%_0.189_293.745)] to-[oklch(81.1%_0.111_293.571)] "> <!--[oklch(38%_0.189_293.745)] / [oklch(81.1%_0.111_293.571)] -->
 
-  <header class="bg-[oklch(38%_0.189_293.745)]"> <!--Color de el panel de arriba -->
+  <header class="bg-[oklch(38%_0.189_293.745)] sticky top-0 z-50"> <!--Color de el panel de arriba,menu deciende con el scroll sticky top-0 z-50 -->
     <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
       <div class="flex lg:flex-1">
         <a href="https://github.com/NATOcl/NATOcl.github.io" class="-m-1.5 p-1.5">
@@ -84,7 +84,8 @@
         </div>
 
         <a href="#aboutme" class="text-sm/6 font-semibold text-white">Sobre mi</a>
-        <a href="#proyectos" class="text-sm/6 font-semibold text-white">Mis proyectos</a>
+        <a href="#conocimientos" class="text-sm/6 font-semibold text-white">Mis Conocimientos</a>
+        <a href="#educacion" class="text-sm/6 font-semibold text-white">Educación</a>
         <a href="mailto:ni.troncoso@duocuc.cl?subject=Contacto%20desde%20tu%20web&body=Hola%20Nicolas," class="text-sm/6 font-semibold text-white">Contactame</a>
       </el-popover-group>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
@@ -174,14 +175,38 @@
       </div>
     </div>
   </div>
-    <section  id="aboutme" class="max-w-3xl mx-auto p-6">
+    <section  id="aboutme" class="max-w-3xl mx-auto p-6 scroll-mt-24"> <!-- scroll-mt-24: agrega un margen "virtual" de scroll arriba de esta seccion -->
         <h3 class="text-2xl font-bold mb-4 text-[oklch(27.7%_0.046_192.524)]">Sobre mi</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, officiis, est quidem expedita voluptas nam ex odio libero repudiandae quis doloremque dicta porro? Assumenda quae rem exercitationem odit cumque consequatur.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore laudantium dolor obcaecati, placeat, eum magnam tempora nesciunt atque suscipit reiciendis illo. Repudiandae ipsam nisi tempore tenetur eius suscipit deleniti dolor.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eveniet dolores, quisquam enim magni voluptate a veniam iste exercitationem nemo sapiente consequuntur deleniti perspiciatis unde ut libero. Maiores, hic ullam?</p>
     </section>
-    <section  id="proyectos" class="max-w-3xl mx-auto p-6">
-        <h3 class="text-2xl font-bold mb-4 text-[oklch(27.7%_0.046_192.524)]">Proyectos</h3>
+
+    <section  id="educacion" class="max-w-3xl mx-auto p-6 scroll-mt-24"> <!-- scroll-mt-24: agrega un margen "virtual" de scroll arriba de esta seccion -->
+        <h3 class="text-2xl font-bold mb-4 text-[oklch(27.7%_0.046_192.524)]">Educación</h3>
+        <div class="flex items-center gap-6">
+          <img src="./src/images/duoc.png" class="h-40 w-40 object-cover rounded-full flex-shrink-0" />
+          <div>
+            <h4 class="text-xl font-semibold text-black">Técnico En Radiodiagnóstico Y Radioterapia</h4>
+            <p class="text-black">Duoc UC — Sede San Joaquín</p>
+            <p class="text-sm text-black mt-1">2020 - 2024</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <img src="./src/images/duoc.png" class="h-40 w-40 object-cover rounded-full flex-shrink-0" />
+          <div>
+            <h4 class="text-xl font-semibold text-black">Ingeniería en Informática</h4>
+            <p class="text-black">Duoc UC — Sede San Joaquín</p>
+            <p class="text-sm text-black mt-1">2025 - Presente</p>
+          </div>
+        </div>
+    </section>
+
+    <hr class="my-6 max-w-3xl mx-auto">
+
+    
+    <section  id="conocimientos" class="max-w-3xl mx-auto p-6 scroll-mt-24"> <!-- scroll-mt-24: agrega un margen "virtual" de scroll arriba de esta seccion -->
+        <h3 class="text-2xl font-bold mb-4 text-[oklch(27.7%_0.046_192.524)]">Conocimientos</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit et, non animi unde facere suscipit voluptatum perferendis amet earum tempora quam magni odit. Sunt voluptates eaque, fugiat inventore aliquam quasi.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores obcaecati et soluta molestias ipsum dignissimos, quidem nemo dolor dolore impedit veniam alias accusamus magnam perspiciatis consequatur fugiat ab rerum numquam.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quisquam quidem animi corrupti! Placeat, voluptate laborum! Nesciunt excepturi eius ipsa odit vel! Delectus consectetur maiores, dolores beatae sapiente hic amet?</p>
